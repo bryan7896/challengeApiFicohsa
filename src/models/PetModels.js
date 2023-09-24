@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 
 const petSchema = new mongoose.Schema({
-  name: String,
-  peso: String,
-  maleHeight: String,
-  femaleHeight: String,
-  colores: String,
-  origen: String
+    breed: String,
+    peso: String,
+    maleHeight: String,
+    femaleHeight: String,
+    colors: String,
+    origin: String,
+    urlImg: string,
+    details: string,
 });
 
 module.exports = mongoose.model('Pet', petSchema);

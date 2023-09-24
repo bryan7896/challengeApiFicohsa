@@ -7,8 +7,16 @@ class PetRepository {
 
     async getPetsBySearchParam(searchParam) {
         try {
-            const pets = await Pet.find({ name: { $regex: searchParam, $options: 'i' } });
+            const pets = await Pet.find({ breed: { $regex: searchParam, $options: 'i' } });
             return pets;
+        } catch (error) {
+            throw error;
+        }
+    }
+    async createPet(newPetData) {
+        try {
+            const createdPet = await Pet.create(newPetData);
+            return createdPet;
         } catch (error) {
             throw error;
         }

@@ -7,8 +7,8 @@ const petSchema = new mongoose.Schema({
     femaleHeight: String,
     colors: String,
     origin: String,
-    urlImg: string,
-    details: string,
+    urlImg: String,
+    details: String,
 });
 
 module.exports = mongoose.model('Pet', petSchema);
